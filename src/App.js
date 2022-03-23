@@ -3,6 +3,8 @@ import Dinner from "./dinner";
 const App = () => {
   return (
     <div className="App">
+      <h1>Session 3</h1>
+      <hr />
       <Dinner dishName="Nihaari" sweetDish="Kheer" />
       <hr />
       <Dinner dishName="Biryani" sweetDish="Jaleebi" />
