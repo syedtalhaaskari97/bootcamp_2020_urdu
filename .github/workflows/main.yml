@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the session_3 branch
+  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ session_3 ]
 
@@ -28,14 +28,15 @@ jobs:
         with:
           version: 14
         
-      - name: Installing dependencies
+
+      - name: Installing Node Dependencies
         run: npm i
-      
-      - name: Installing Surge
+
+      - name: Install Surge
         run: npm i -g surge
-        
-      - name: Creating Build
+
+      - name: Create Build File
         run: npm run build
-        
-      - name: Deploying on Surge
+      
+      - name: Deploying on surge
         run: surge ./build https://bootcamp_session_3_sta.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
