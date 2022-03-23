@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Dinner from "./dinner";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dinner dishName="Nihaari" sweetDish="Kheer" />
+      <hr />
+      <Dinner dishName="Biryani" sweetDish="Jaleebi" />
+      <hr />
+      <Dinner dishName="Karahi" sweetDish="Gajar ka Halwa" />
+      <hr />
     </div>
-  );
+  )
 }
 
 export default App;
