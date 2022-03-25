@@ -1,7 +1,5 @@
 # Surge Link bootcamp_session_4_sta.surge.sh
 
-e8a0cfccae055ed24a218ca1a9df0ab1
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
