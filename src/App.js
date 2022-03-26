@@ -9,7 +9,7 @@ const App = () => {
   return (
     <CounterContext.Provider value={counter}>
       <div>
-        <h1>Session 5 After Deployment</h1>
+        <h1>Session 5 After Deployment on Surge</h1>
         <div className="mt-2">
           <Parent />
         </div>
