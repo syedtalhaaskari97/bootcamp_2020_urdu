@@ -16,6 +16,7 @@
 .btn {
   padding: 5px 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .btn-light {
@@ -55,4 +56,8 @@
 
 .mx-auto {
   margin: 0 auto
+}
+
+.text-center {
+  text-align: center
 }
