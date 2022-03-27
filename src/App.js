@@ -1,20 +1,15 @@
-import { useState } from "react";
 import "./App.css";
-import Parent from "./Components/Parent";
-import CounterContext from "./ContextApi/CounterContext";
+import Child from "./Components/Child";
+import { TransactionProvider } from "./ContextApi/TransContext";
 
 const App = () => {
-  let counter = useState(() => 1)
 
   return (
-    <CounterContext.Provider value={counter}>
+    <TransactionProvider>
       <div>
-        <h1>Session 5 After Deployment on Surge</h1>
-        <div className="mt-2">
-          <Parent />
-        </div>
+        <Child />
       </div>
-    </CounterContext.Provider>
+    </TransactionProvider>
   )
 }
 

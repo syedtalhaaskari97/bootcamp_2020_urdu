@@ -1,63 +1,41 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.light {
-  background-color: bisque;
-}
-
-.dark {
-  background-color: black;
-  color: bisque
-}
-
-.btn {
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-light {
-  border: 1px solid #000;
-  color: #000;
-  background-color: aliceblue;
-}
-
-.btn-dark {
-  border: 1px solid #fff;
-  color: #fff;
-  background-color: darkgray;
-}
-
-.btn-counter {
-  border: 1px solid blue;
-  color: blue;
-  background-color: rgb(255, 255, 255);
-}
-
-#root > div {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.mx-auto {
-  margin: 0 auto
+.container {
+  max-width: 400px;
+  min-height: 450px;
+  margin: 0 auto;
+  background-color: #efefef;
+  box-shadow: 0 0 10px gray;
+  margin-top: 50px;
+  padding: 10px 50px;
 }
 
 .text-center {
-  text-align: center
+  text-align: center;
+}
+
+.expense-container {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  box-shadow: 0 0 10px gray;
+}
+
+.transaction-form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 5px;
+}
+
+.transaction-list {
+  margin: 0;
+  padding: 0;
+}
+
+.transaction-list>li {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px gray;
+  padding: 10px 15px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 4px;
 }
