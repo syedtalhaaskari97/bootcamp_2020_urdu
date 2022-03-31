@@ -1,23 +1,28 @@
-import "./App.css";
-import AddTransaction from "./Components/AddTransaction";
-import CurrentBalance from "./Components/CurrentBalance";
-import ExpenseBoard from "./Components/ExpenseBoard";
-import Header from "./Components/Header";
-import TransactionHistory from "./Components/TransactionHistory";
-import { TransactionProvider } from "./Context/TransContext";
+import { useEffect, useState } from "react";
+// import "./App.css";
 
 const App = () => {
 
+  const [repos, setRepos] = useState(() => []);
+
+  useEffect(() => {
+    async function getRepos() {
+      const response = await fetch("https://api.github.com/users/muhammadmohsin/repos")
+      const data = await response.json();
+      console.log("data", data);
+      setRepos(data);
+    }
+    getRepos()
+  }, [])
+
   return (
-    <TransactionProvider>
-      <div className="container">
-        <Header />
-        <CurrentBalance />
-        <ExpenseBoard />
-        <TransactionHistory />
-        <AddTransaction />
+      <div className="App">
+        <ul>
+          {repos.map((repo, ind) => (
+            <li key={ind}>{repo.name}</li>
+          ))}
+        </ul>
       </div>
-    </TransactionProvider>
   )
 }
 
