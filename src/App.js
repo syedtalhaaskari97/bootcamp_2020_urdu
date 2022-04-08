@@ -2,12 +2,16 @@ import { Button, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import "./App.css";
+import BarChart from './Components/Charts/BarChart';
+import PieChart from './Components/Charts/PieChart';
 import Navbar from './Components/Navbar';
 
 const App = () => {
   return (
     <>
-      <Navbar />
+    {/* <BarChart /> */}
+    <PieChart />
+      {/* <Navbar />
       <Paper elevation={7} style={{
         width: 400,
         margin: '0 auto',
@@ -30,7 +34,7 @@ const App = () => {
           <TextField id="password-input" label="Enter Password" variant="standard" />
           <Button variant="contained">Login</Button>
         </Box>
-      </Paper>
+      </Paper> */}
     </>
   )
 }
