@@ -5,7 +5,7 @@ import Chart from 'chart.js/auto'
 
 import styles from './ChartComponent.module.css';
 
-const ChartComponent = () => {
+const ChartComponent = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const ChartComponent = () => {
   const lineChart = (
     dailyData.length
       ? (<Line
+
         data={{
           labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString()),
           datasets: [
@@ -46,9 +47,33 @@ const ChartComponent = () => {
       : null
   )
 
+  const barChart = (
+    confirmed
+      ? (
+        <Bar
+          data={{
+            labels: ['Infected', 'Recovered', 'Deaths'],
+            datasets: [{
+              label: 'People',
+              backgroundColor: [
+                'rgba(0, 0, 255, 0.5)',
+                'rgba(0, 255, 0, 0.5)',
+                'rgba(255, 0, 0, 0.5)',
+              ],
+              data: [confirmed.value, recovered.value, deaths.value]
+            }]
+          }}
+          options={{
+            legend: { display: false },
+            title: { display: true, text: `Current State is ${country}` },
+          }}
+        />
+      ) : null
+  )
+
   return (
     <div className={styles.container}>
-      {lineChart}
+      {country ? barChart : lineChart}
     </div>
   )
 }
