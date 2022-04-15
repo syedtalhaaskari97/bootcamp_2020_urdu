@@ -1,0 +1,7 @@
+For Global:
+https://covid19.mathdro.id/api
+
+For Countries:
+https://covid19.mathdro.id/api/countries/<country>
+
+https://api.covidtracking.com/v1/us/daily.json
