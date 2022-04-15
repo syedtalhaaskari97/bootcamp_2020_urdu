@@ -1,7 +1,11 @@
+import InfoPanel from "./Components/InfoPanel";
+import Navbar from "./Components/Navbar";
+
 const App = () => {
   return (
     <div className="App">
-      <h1>Session 3</h1>
+      <Navbar />
+      <InfoPanel />
     </div>
   )
 }
